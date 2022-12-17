@@ -4,7 +4,7 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 const httpserver = createServer(app);
 const cors = require("cors");
-const ACTIONS = require("./src/Actions");
+const ACTIONS = require("./Actions");
 const PORT = 3001;
 
 app.use(express.static("public"));
