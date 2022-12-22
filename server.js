@@ -16,7 +16,7 @@ httpserver.listen(PORT, () => {
 
 const io = new Server(httpserver, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.SERVER_URL,
         credentials: true,
     },
 });
