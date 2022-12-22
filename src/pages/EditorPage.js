@@ -23,7 +23,7 @@ function EditorPage() {
     let location = useLocation();
     useEffect(() => {
         const init = () => {
-            socketRef.current = io(process.env.REACT_APP_BACKEND_URL);
+            socketRef.current = io(process.env.REACT_APP_BACKEND_URL, { transports : ['websocket'] });
             socketRef.current.emit(ACTIONS.JOIN, {
                 roomId,
                 username: location.state.username,
